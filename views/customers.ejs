@@ -1,0 +1,37 @@
+<%- include("_header") -%>
+
+<h1>Find Customers</h1>
+<h2>Total number of records in the database: <%= data.length %></h2>
+
+<form>
+  <div class="form-horizontal">
+
+    <%- include("_editor") -%>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2"></label>
+      <div class="col-sm-10">
+        <button id="searchBtn" class="btn btn-default btn-primary">Find</button>
+        <a class="btn btn-default btn-primary" href="/customers">Reset</a>
+      </div>
+    </div>
+  </div>
+</form>
+<div id='resultOut'>
+    <h2 id='resultTitle'>Number of Records Found: </h2>
+    <table id='resultTable' class="table">
+      <thead>
+        <tr>
+          <th scope='col'>ID</th>
+          <th scope='col'>First Name</th>
+          <th scope='col'>Last Name</th>
+          <th scope='col'>State</th>
+          <th scope='col'>Sales YTD</th>
+          <th scope='col'>Prev Years Sales</th>
+          <th scope='col'><button class="btn btn-default btn-success">Create Customer</button></th>
+        </tr>
+      </thead>
+    </table>
+</div>
+<script src='/javascripts/search.js'></script>
+<%- include("_footer") -%>
